@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} - Yeoman Blog</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Lekton|Ubuntu+Mono:400,700" rel="stylesheet">
+  <link href="http://yeoman.io/assets/css/normalize.css" rel="stylesheet">
+  <link href="http://yeoman.io/assets/css/yeoman.css" rel="stylesheet">
+  <link href="assets/css/override.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="content">
+
+<header>
+  <div class="strikethrough strikethrough-image">
+    <h1><img src="http://yeoman.io/assets/img/yeoman-header.png" alt="Yeoman" /></h1>
+  </div>
+</header>
+
+<article>
+    {% for post in site.posts limit:1 %}
+      {% include article.html %}
+    {% endfor %}
+</article>
+
+<hr>
+  <section>
+    <ul class="quick-links">
+      <li class="google-follow">
+        Follow +Yeoman on
+        <a href="https://plus.google.com/101063139999404044459?prsrc=3" rel="publisher" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:20px;height:20px;"></a>
+      </li>
+      <li style="width: 120px; height: 25px;">
+        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 120px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 120px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1374701728026" name="I0_1374701728026" src="https://apis.google.com/_/+1/fastbutton?bsv&amp;size=medium&amp;annotation=inline&amp;width=120&amp;hl=en-US&amp;origin=http%3A%2F%2Fyeoman.io&amp;url=http%3A%2F%2Fyeoman.io%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.vZBj3k9DOIM.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAItRSTOwfbQ5i9OtKjEG-NPgbr1ETMIIQw#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled&amp;id=I0_1374701728026&amp;parent=http%3A%2F%2Fyeoman.io&amp;pfname=&amp;rpctoken=72480124" allowtransparency="true" data-gapiattached="true" title="+1"></iframe></div>
+      </li>
+      <li style="width: 220px; height: 25px;">
+        <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.1372833608.html#_=1374701728094&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=yeoman&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 213px; height: 20px;"></iframe>
+      </li>
+      <li style="width: 107px; height: 25px;">
+        <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1372833608.html#_=1374701728077&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fyeoman.io%2F&amp;size=m&amp;text=Yeoman%20-%20Modern%20Workflows%20For%20Modern%20Web%20Apps&amp;url=http%3A%2F%2Fyeoman.io" class="twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 107px; height: 20px;"></iframe>
+      </li>
+    </ul>
+  </section>
+
+</div>
+
+<script>
+  // $script.js - github.com/ded/script.js
+  (function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this)
+  var _gaq=[
+    ['_setAccount','UA-32956520-1'],
+    ['_setDomainName', 'blog.yeoman.io'],
+    ['_trackPageview'],['_trackPageLoadTime']
+  ];
+  $script('http://www.google-analytics.com/ga.js');
+  $script('https://apis.google.com/js/plusone.js');
+  $script("//platform.twitter.com/widgets.js");
+</script>
+</body>
+</html>
